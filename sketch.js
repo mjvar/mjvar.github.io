@@ -1,4 +1,7 @@
 let step;
+let mouseDist;
+let fillFactor;
+let agitateFactor;
 
 function windowResized(){
 	resizeCanvas(windowWidth, windowHeight);
@@ -17,16 +20,17 @@ function draw(){
 	background(250);
 	for(let x = -step; x <= width + step; x += step){
 		for(let y = -step; y <= height + step; y += step){
-			drawCirc(x,y,dist(mouseX, mouseY, x, y));
+			mouseDist = dist(mouseX, mouseY, x, y);
+			fillFactor = constrain(map(mouseDist, 0, 1000, 100, 255), 120, 255);
+			agitateFactor = constrain(map(mouseDist, 0, 1000, 0, step/3), 0, step/3);
+			drawCirc(x,y, mouseDist, fillFactor, agitateFactor);
 		}
 	}
 }
 
-function drawCirc(x, y, mouseDist){
+function drawCirc(x, y, mouseDist, fillFactor, agitateFactor){
 	noStroke();
-	blendMode(DIFFERENCE);
-	let fillFactor = constrain(map(mouseDist, 0, 1000, 100, 255), 120, 255);
-	let agitateFactor = constrain(map(mouseDist, 0, 1000, 0, step/3), 0, step/3);
+	// blendMode(DIFFERENCE);
 
 	// let agitateFactor = step/1.5;
 	fill(fillFactor,0,0,30);
