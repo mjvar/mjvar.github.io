@@ -1,0 +1,113 @@
+.body-text{
+	display: inline-flex;
+	width: 100%;
+	justify-content: center;
+}
+
+/*=====LANDING PAGE CSS=====*/
+
+.landing{
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.landing h1{
+	transition: 0.5s;
+	font-size: 8vh;
+	line-height: 0.9;
+}
+
+.landing h1:hover .first-m{
+	color: #ed58d2;
+}
+
+.landing h1:hover .first-v{
+	color: #fffd6b;
+}
+
+.landing .first {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.landing p{
+	font-size: 2vh;
+}
+
+.landing a{
+	color: black;
+	transition: 0.5s;
+}
+
+.landing .about-landing-link:hover{
+	text-shadow: 2px 1px #ed58d2;
+}
+
+.landing .projects-landing-link:hover{
+	text-shadow: 2px 1px #fffd6b;
+}
+
+.landing .blog-landing-link:hover{
+	text-shadow: 2px 1px #bafdff;
+}
+
+.socials{
+	position: fixed;
+	text-align: center;
+	left: 50%;
+	bottom: 1%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+
+.socials img{
+	width: 1vw;
+	height: 1vw;
+	padding-left: 0.4%;
+	padding-right: 0.4%;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.socials img:hover{
+	width: 1.2vw;
+	height: 1.2vw;
+}
+
+/*=====ABOUT PAGE CSS=====*/
+.about{
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.about h1{
+	text-align: center;
+	font-size: 3vh;
+}
+
+.par{
+	font-size: 1.5vh;
+	width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
