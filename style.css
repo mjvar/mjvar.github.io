@@ -1,7 +1,85 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.nav{
+	color: black;
+	text-decoration: none;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.nav:hover{
+	text-decoration: underline;
+}
+
+.home-nav:hover{
+	color: #a8a8a8;
+	text-shadow: 2px 2px black;
+}
+
+.about-nav:hover{
+	color: #ed58d2;
+	text-shadow: 2px 2px black;
+}
+
+.about-nav.selected{
+	color: #ed58d2;
+	text-shadow: 2px 2px black;
+}
+
+.projects-nav:hover{
+	color: #fffd6b;
+	text-shadow: 2px 2px black;
+}
+
+.projects-nav.selected{
+	color: #fffd6b;
+	text-shadow: 2px 2px black;
+}
+
+.blog-nav:hover{
+	color: #bafdff;
+	text-shadow: 2px 2px black;
+}
+
+.blog-nav.selected{
+	color: #bafdff;
+	text-shadow: 2px 2px black;
+}
+
+
 .body-text{
 	display: inline-flex;
 	width: 100%;
 	justify-content: center;
+}
+
+.socials{
+	position: fixed;
+	text-align: center;
+	left: 50%;
+	bottom: 1%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+
+.socials img{
+	width: 3.5vh;
+	height: 3.5vh;
+	padding-left: 0.4%;
+	padding-right: 0.4%;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.socials img:hover{
+	width: 5vh;
+	height: 5vh;
 }
 
 /*=====LANDING PAGE CSS=====*/
@@ -57,30 +135,6 @@
 	text-shadow: 2px 1px #bafdff;
 }
 
-.socials{
-	position: fixed;
-	text-align: center;
-	left: 50%;
-	bottom: 1%;
-	transform: translate(-50%,-50%);
-	width: 100%;
-}
-
-.socials img{
-	width: 1vw;
-	height: 1vw;
-	padding-left: 0.4%;
-	padding-right: 0.4%;
-	-webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.socials img:hover{
-	width: 1.2vw;
-	height: 1.2vw;
-}
 
 /*=====ABOUT PAGE CSS=====*/
 .about{
@@ -99,7 +153,64 @@
 }
 
 
+/*=====PROJECT PAGE CSS=====*/
+.project-container{
+	padding-top: 10%;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-family: 'Montserrat', sans-serif;
+}
 
+.project{
+	width: 15vmax;
+	padding: 1vmax;
+	margin: 2vmax;
+	border-radius: 10px;
+	cursor: pointer;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    line-height: 0.5;
+}
+
+h1{
+	text-align: center;
+	font-size: 3vh;
+}
+
+.project p{
+	font-style: italic;
+	font-size: 1vh;
+}
+
+.project.purp{
+	background-color: rgba(237, 88, 210, 0.5); 
+}
+.project.purp:hover{
+	background-color: rgba(237, 88, 210, 0.8); 
+}
+
+.project.blu{
+	background-color: rgba(41, 249, 255, 0.5); 
+}
+.project.blu:hover{
+	background-color: rgba(41, 249, 255, 0.8); 
+}
+
+.project.yell{
+	background-color: rgba(255, 251, 25, 0.5); 
+}
+.project.yell:hover{
+	background-color: rgba(255, 251, 25, 0.8); 
+}
+
+.project img{
+	max-width: 100%;
+
+}
 
 
 
