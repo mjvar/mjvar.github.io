@@ -345,6 +345,11 @@ h1{
 	max-width: 100%;
 }
 
+.popup-img.shrink{
+	width: 60%;
+	background-color: black;
+}
+
 .popup-container a{
 	text-decoration: none;
 	color: black;
