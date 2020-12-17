@@ -62,7 +62,7 @@ body{
 }
 
 .socials{
-	position: fixed;
+	position: absolute;
 	text-align: center;
 	left: 50%;
 	bottom: 1%;

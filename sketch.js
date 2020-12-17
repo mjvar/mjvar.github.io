@@ -68,7 +68,7 @@ function toggleProjectPopup(proj){
 				</p>`;
 	}else if(proj == "map"){
 		popCont.innerHTML = `
-				<div class="popup-img">
+				<div class="popup-img shrink">
 					<img src="media/map-min.png">
 				</div>
 				<h1>Procedural Map Generation</h1>
