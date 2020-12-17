@@ -49,7 +49,7 @@ function toggleProjectPopup(proj){
 	if(proj == "sonar-dj"){
 		popCont.innerHTML = `
 				<div class="popup-img">
-					<img src="media/sonar-dj.png">
+					<img src="media/sonar-dj-min.png">
 				</div>
 				<h1>Sonar DJ</h1>
 				<h5><a href="https://www.youtube.com/watch?v=uY-fv90nOMc&feature=youtu.be" target="_blank" class="projlink">link</a> | <a href="https://github.com/mjvar/intro-to-interactive-media/tree/master/finalProject" target="_blank" class="codelink">code</a></h5>
@@ -59,7 +59,7 @@ function toggleProjectPopup(proj){
 	}else if(proj == "bullet-time"){
 		popCont.innerHTML = `
 				<div class="popup-img">
-					<img src="media/bullet-time.png">
+					<img src="media/bullet-time-min.png">
 				</div>
 				<h1>Bullet Time</h1>
 				<h5><a href="https://infairvar.itch.io/bullet-time" target="_blank" class="projlink">link</a> | <a href="https://github.com/mjvar/intro-to-interactive-media/tree/master/midtermProject" target="_blank" class="codelink">code</a></h5>
@@ -69,7 +69,7 @@ function toggleProjectPopup(proj){
 	}else if(proj == "map"){
 		popCont.innerHTML = `
 				<div class="popup-img">
-					<img src="media/map.png">
+					<img src="media/map-min.png">
 				</div>
 				<h1>Procedural Map Generation</h1>
 				<h5><a href="https://github.com/mjvar/intro-to-interactive-media/tree/master/September22" target="_blank" class="codelink">code & docs</a></h5>
@@ -80,7 +80,7 @@ function toggleProjectPopup(proj){
 	else if(proj == "body"){
 		popCont.innerHTML = `
 				<div class="popup-img shrink">
-					<img src="media/body.png">
+					<img src="media/body-min.png">
 				</div>
 				<h1>The Body at the Dorm Party</h1>
 				<h5><a href="https://mjvar.github.io/body-at-the-dorm-party" target="_blank" class="projlink">link</a> | <a href="https://github.com/mjvar/body-at-the-dorm-party" target="_blank" class="codelink">code</a></h5>
@@ -91,7 +91,7 @@ function toggleProjectPopup(proj){
 	else if(proj == "sakay"){
 		popCont.innerHTML = `
 				<div class="popup-img">
-					<img src="media/sakay.png">
+					<img src="media/sakay-min.png">
 				</div>
 				<h1>Sakay.ph Transport Coverage Analysis</h1>
 				<h5><a href="https://https://blog.sakay.ph/transport-coverage-in-greater-manila-during-april-ecq/" target="_blank" class="projlink">link</a></h5>
@@ -101,7 +101,7 @@ function toggleProjectPopup(proj){
 	}else if(proj == "uwu"){
 		popCont.innerHTML = `
 				<div class="popup-img shrink">
-					<img src="media/uwu.png">
+					<img src="media/uwu-min.png">
 				</div>
 				<h1>Uwuify</h1>
 				<h5><a href="http://twitter.com/uwuify" target="_blank" class="projlink">link</a> | <a href="https://github.com/mjvar/uwuify" target="_blank" class="codelink">code</a></h5>
@@ -112,7 +112,7 @@ function toggleProjectPopup(proj){
 	else if(proj == "days"){
 		popCont.innerHTML = `
 				<div class="popup-img">
-					<img src="media/days.png">
+					<img src="media/days-min.png">
 				</div>
 				<h1>One of Those Days</h1>
 				<h5><a href="http://mjvar.github.io/one-of-those-days" target="_blank" class="projlink">link</a> | <a href="https://github.com/mjvar/one-of-those-days" target="_blank" class="codelink">code</a></h5>
@@ -123,7 +123,7 @@ function toggleProjectPopup(proj){
 	else if(proj == "qff"){
 		popCont.innerHTML = `
 				<div class="popup-img">
-					<img src="media/qff.png">
+					<img src="media/qff-min.png">
 				</div>
 				<h1>Quarantine Film Festival</h1>
 				<h5><a href="http://mjvar.github.io/qff" target="_blank" class="projlink">link</a> | <a href="https://github.com/mjvar/qff" target="_blank" class="codelink">code</a></h5>
