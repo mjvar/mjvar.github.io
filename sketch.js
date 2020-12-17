@@ -79,7 +79,7 @@ function toggleProjectPopup(proj){
 	}
 	else if(proj == "body"){
 		popCont.innerHTML = `
-				<div class="popup-img">
+				<div class="popup-img shrink">
 					<img src="media/body.png">
 				</div>
 				<h1>The Body at the Dorm Party</h1>
