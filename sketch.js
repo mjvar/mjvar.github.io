@@ -8,7 +8,7 @@ function windowResized(){
 }
 
 function setup(){
-	canvas = createCanvas(windowWidth, windowHeight);
+	var canvas = createCanvas(windowWidth, windowHeight);
 	canvas.position(0,0);
 	// stay behind everything
 	canvas.style('z-index', '-1');

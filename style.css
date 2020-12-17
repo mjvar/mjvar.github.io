@@ -1,6 +1,10 @@
+html{
+	position: relative;
+	min-height: 100%;
+}
+
 body{
 	font-family: 'Montserrat', sans-serif;
-	overflow: hidden;
 }
 
 .nav{
@@ -86,6 +90,10 @@ body{
 	height: 5vh;
 }
 
+canvas{
+	position: fixed !important;
+}
+
 /*=====LANDING PAGE CSS=====*/
 
 .landing{
@@ -147,8 +155,9 @@ body{
 }
 
 .par{
-	font-size: 1.2em;
+	font-size: 1.1em;
 	margin-top: 5%;
+	margin-bottom: 10%;
 	padding: 2%;
 	width: 55vmax;
 	text-align: left;
@@ -163,7 +172,7 @@ body{
 }
 
 .jumbo{
-	font-size: 2vh;
+	font-size: 1.3em;
 	font-weight: bold;
 }
 
