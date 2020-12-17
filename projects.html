@@ -13,44 +13,92 @@
 
 
 		<div class="project-container">
-			<div class="project purp">
+			<div class="project purp" onclick="toggleProjectPopup('sonar');">
 				<div class="proj-img-container">
 					<img src="media/sonar-dj.png">
 				</div>
-				<h4>Sonar DJ</h4>
-				<p>Music production</p>
-			</div>
-
-			<div class="project blu">
-				<img src="media/bullet-time.png">
-				<h4>Bullet Time</h4>
-				<p>Game</p>
+				<div class="proj-text">
+					<h4>Sonar DJ</h4>
+					<p>music production suite</p>
+				</div>
 			</div>
 
 			<div class="project yell">
-				<img src="media/sonar-dj.png">
-				<h4>Sonar DJ</h4>
-			</div>
-
-			<div class="project purp">
-				<img src="media/sonar-dj.png">
-				<h4>Sonar DJ</h4>
+				<div class="proj-img-container" onclick="toggleProjectPopup();">
+					<img src="media/bullet-time.png">
+				</div>
+				<div class="proj-text">
+					<h4>Bullet Time</h4>
+					<p>game</p>
+				</div>
 			</div>
 
 			<div class="project blu">
-				<img src="media/sonar-dj.png">
-				<h4>Sonar DJ</h4>
-			</div>
-
-			<div class="project yell">
-				<img src="media/sonar-dj.png">
-				<h4>Sonar DJ</h4>
+				<div class="proj-img-container" onclick="toggleProjectPopup();">
+					<img src="media/map.png">
+				</div>
+				<div class="proj-text">
+					<h4>Procedural Map Gen</h4>
+					<p>game dev tool</p>
+				</div>
 			</div>
 
 			<div class="project purp">
-				<img src="media/sonar-dj.png">
-				<h4>Sonar DJ</h4>
+				<div class="proj-img-container" onclick="toggleProjectPopup();">
+					<img src="media/body.png">
+				</div>
+				<div class="proj-text">
+					<h4>The Body at the Dorm Party</h4>
+					<p>web-based murder mystery</p>
+				</div>
 			</div>
+
+			<div class="project yell">
+				<div class="proj-img-container" onclick="toggleProjectPopup();">
+					<img src="media/sakay.png">
+				</div>
+				<div class="proj-text">
+					<h4>Sakay.ph</h4>
+					<p>data science & visualization</p>
+				</div>
+			</div>
+
+			<div class="project blu">
+				<div class="proj-img-container" onclick="toggleProjectPopup();">
+					<img src="media/uwu.png">
+				</div>
+				<div class="proj-text">
+					<h4>Uwuify</h4>
+					<p>twitter bot</p>
+				</div>
+			</div>
+
+			<div class="project purp">
+				<div class="proj-img-container" onclick="toggleProjectPopup();">
+					<img src="media/days.png">
+				</div>
+				<div class="proj-text">
+					<h4>One of Those Days</h4>
+					<p>web + audio piece</p>
+				</div>
+			</div>
+
+			<div class="project yell">
+				<div class="proj-img-container" onclick="toggleProjectPopup();">
+					<img src="media/qff.png">
+				</div>
+				<div class="proj-text">
+					<h4>Quarantine Film Festival</h4>
+					<p>front-end web dev</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-popup">
+			<div class="popup-container">
+				
+			</div>
+			<h1 class="close" onclick="toggleProjectPopup();">X</h1>
 		</div>
 
 		<script src="sketch.js"></script>
