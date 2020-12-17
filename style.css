@@ -331,7 +331,7 @@ h1{
 }
 
 .popup-container{
-	width: 50%;
+	width: 70%;
 	height: 50%;
 }
 
@@ -345,7 +345,7 @@ h1{
 	margin-top: -15%;
 	margin-left: auto;
 	margin-right: auto;
-	width: 100%;
+	width: 60%;
 	overflow: hidden;
 }
 
@@ -355,8 +355,7 @@ h1{
 }
 
 .popup-img.shrink{
-	width: 60%;
-	background-color: black;
+	width: 40%;
 }
 
 .popup-container a{
