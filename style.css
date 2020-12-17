@@ -128,15 +128,15 @@ body{
 }
 
 .landing .about-landing-link:hover{
-	text-shadow: 2px 1px #ed58d2;
+	text-shadow: 0.1vh 0.05vh #ed58d2;
 }
 
 .landing .projects-landing-link:hover{
-	text-shadow: 2px 1px #fffd6b;
+	text-shadow: 0.1vh 0.05vh #fffd6b;
 }
 
 .landing .blog-landing-link:hover{
-	text-shadow: 2px 1px #bafdff;
+	text-shadow: 0.1vh 0.05vh #bafdff;
 }
 
 
@@ -148,9 +148,12 @@ body{
 
 .par{
 	font-size: 1.2em;
-	padding-top: 5%;
-	width: 50vmax;
+	margin-top: 5%;
+	padding: 2%;
+	width: 55vmax;
 	text-align: left;
+	background-color: rgba(240,240,240,0.5);
+	border-radius: 1%;
 }
 
 .par img{
@@ -180,6 +183,18 @@ body{
 	/*display: flex;
 	justify-content: space-between;
 	align-items: flex-start;*/
+}
+
+.info a{
+	color: black;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.info a:hover{
+	text-shadow: 0.1vh 0.05vh #fffd6b;
 }
 
 /*.info-text{
@@ -318,7 +333,7 @@ h1{
 
 .popup-img{
 	float: center;
-	margin-top: -5%;
+	margin-top: -15%;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
@@ -333,14 +348,18 @@ h1{
 .popup-container a{
 	text-decoration: none;
 	color: black;
-
-}
-
-.projlink:hover{
 	-webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+
+}
+
+.projlink:hover{
+	text-shadow: 1px 1px #ed58d2;
+}
+.codelink:hover{
+	text-shadow: 1px 1px #fffd6b;
 }
 
 
