@@ -275,7 +275,7 @@ PLATFORMS
   arm64-darwin-24
 
 DEPENDENCIES
-  github-pages
+  github-pages (~> 232)
 
 BUNDLED WITH
    2.6.9
