@@ -1,0 +1,23 @@
+title: "matthew varona"
+description: "Matthew is a PhD student in the Department of Computer Science at the University of Toronto, advised by Prof. Carolina Nobre."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://matthew.wiki" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+# Author settings
+author:
+  name: "Matthew Varona"
+  email: "varona@cs.toronto.edu"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Plugins (optional)
+plugins:
+  - jekyll-feed
