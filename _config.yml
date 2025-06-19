@@ -1,6 +1,6 @@
 title: "matthew varona"
 description: "Matthew is a PhD student in the Department of Computer Science at the University of Toronto, advised by Prof. Carolina Nobre."
-baseurl: "/mjvar.github.io" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mjvar.github.io" # the base hostname & protocol for your site
 
 # Build settings
