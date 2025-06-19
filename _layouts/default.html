@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en">
+<head>
+	<title>{{ page.title }}</title>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.min.js"></script>
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/media/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/media/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/media/favicon/site.webmanifest">
+	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="description" content="i'm Matthew Varona, a data visualization researcher. i'm currently a PhD student at the University of Toronto and I completed my undergrad at NYU Abu Dhabi (NYUAD). feel free to reach out!">
+	<base target="_blank">
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DS8ZTV5NCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DS8ZTV5NCX');
+</script>
+	<body>
+        {% include nav.html %}
+        <main class="page-content">
+            {{ content }}
+        </main>
+        {% include socials.html %}
+	</body>
+	
+</html>
+
+<!-- What are you doing in here?!??! -->

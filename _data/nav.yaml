@@ -1,0 +1,10 @@
+- name: matthew varona
+  link: /
+- name: about
+  link: /about.html
+- name: research
+  link: /research.html
+- name: blog
+  link: /blog.html
+- name: cool
+  link: /cool.html
