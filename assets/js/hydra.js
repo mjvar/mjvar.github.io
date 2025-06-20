@@ -29,16 +29,46 @@ window.onload = function() {
         width: width,
         height: height
     });
-    
 
     p5.hide();
 	  hydra.canvas.style.zIndex = -1;
     hydra.canvas.style.cursor = 'pointer';
 
+    // weezetastic
+    const audio = new Audio();
+    audio.preload = 'auto';
+    audio.loop = false; // Set to true if you want it to loop
+    
+    // More robust loading
+    let audioReady = false;
+    
+    const loadAudio = () => {
+        audio.src = 'assets/media/Buddy Holly.mp3';
+        audio.load(); // Force reload
+    };
+    
+    audio.addEventListener('canplaythrough', () => {
+        console.log('Song loaded and ready to play');
+        audioReady = true;
+    });
+    
+    audio.addEventListener('error', (e) => {
+        console.error('Error loading song:', e);
+        console.error('Audio error details:', {
+            error: audio.error,
+            networkState: audio.networkState,
+            readyState: audio.readyState,
+            src: audio.src
+        });
+        // Try to reload after error
+        setTimeout(loadAudio, 1000);
+    });
+    loadAudio();
+
     var phrase = isMobile ? ['m', 
       "(tap to\nmelt)", 
-      "🌱", "🌊", "🥭", "🌈","if you\nwant actual\ninformation\nit's in\nthe about\npage...",
-      "or you can\nhang out\nhere too", "no\njudgment!",":-)", 
+      "🌱", "🌊", "🥭", "🌈","(if you\nwant actual\ninformation\nit's in\nthe about\npage...",
+      "or you can\nhang out\nhere too", "no\njudgment!)",":-)", 
       "📀", "👽","🍄","🚅","🏠",
       "oh!\nwhere are\nmy manners", "i haven't\nintroduced\nmyself",
       "my name\nis mo", "well my\nfull name\nis mobile", "but mo\nis usually\neasier for\npeople",
@@ -49,9 +79,9 @@ window.onload = function() {
       "so i\ncan't really\ncomplain","ummm",
       "while\nyou're\nhere", "do you\nwant some\nsnacks?", 
       "ok here\n ya go", "🍩",  "🍰", "🍫","🍪",
-      "🍓", "🧋", "🌽", "🥞", "dude what\nthe heck", "you\nfinished\nall my\nsnacks...!",
+      "🍓", "🧋", "🌽", "🥞", "dude what\nthe heck?", "you\nfinished\nall my\nsnacks...!",
       "grumble\ngrumble", "it's fine\ndon't feel\nbad", "i just\ndidn't think\nyou'd\nactually\nfinish them",
-      "also they\nwere kinda\nmelted\nanyway", "i guess\neverything\nis melting\nround here", 
+      "also they\nwere kinda\nmelted", "i guess\neverything\nis melting\nround here", 
       "is that\nnormal?","anyway","i was\ngonna put\non some\nmusic",
       "if that's\nok with\nyou", "🎸","🥁","🎶","🎵","🎤","💃",
       "what a\ngreat song","oh you're\nstill here?", 
@@ -61,7 +91,7 @@ window.onload = function() {
       "come back\nanytime 🫶", "maybe next\ntime you'll\nmeet my\nroommate?"]
     :['m', "(move, scroll, \n& click)", 
       "🌈", "🌱", "📈", "🌱", "🌊", "🥭", "🌈", "📀",
-      "(also you should\ntry this on a\nmobile device)",];
+      "(also you should\ntry this on a\nmobile device 🎶)",];
     var phraseLength = phrase.length;
     var phraseIndex = 0;
     var noiseVal = 1;
@@ -115,6 +145,43 @@ window.onload = function() {
         // Simple version for mobile
         p5.mouseClicked = ()=>{
           phraseIndex++;
+          const currentIndex = phraseIndex % phraseLength;
+          console.log(phrase[currentIndex]);
+          // Start music at 🎸 emoji
+          if (phrase[currentIndex] === "🎸" && audioReady && audio.paused) {
+            audio.currentTime = 0; // Start from beginning
+            const playPromise = audio.play();
+            
+            if (playPromise !== undefined) {
+              playPromise
+                .then(() => {
+                  console.log('Audio started successfully');
+                })
+                .catch(error => {
+                  console.error('Play failed:', error);
+                  // Try again after user interaction
+                  setTimeout(() => {
+                    audio.play().catch(e => console.log('Retry also failed:', e));
+                  }, 100);
+                });
+            }
+          }
+          
+          // Fade out music after 💃 emoji
+          if (phrase[currentIndex] === "what a\ngreat song" && !audio.paused) {
+            // Simple fade out by reducing volume over time
+            const fadeOut = () => {
+              if (audio.volume > 0.1) {
+                audio.volume -= 0.1;
+                setTimeout(fadeOut, 300); // Reduce volume every 300ms
+              } else {
+                audio.pause();
+                audio.volume = 1; // Reset volume for next time
+              }
+            };
+            fadeOut();
+          }
+
           mobileShuffleX = (p5.random()-0.5)*4;
           mobileShuffleY = (p5.random()-0.5)*4;
           noiseVal = p5.random();
