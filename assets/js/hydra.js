@@ -90,7 +90,7 @@ window.onload = function() {
       "ok i'm\ngonna loop\nback now", "but it\nwas nice\nchatting!",
       "come back\nanytime 🫶", "maybe next\ntime you'll\nmeet my\nroommate?"]
     :['m', "(move, scroll, \n& click)", 
-      "🌈", "🌱", "📈", "🌱", "🌊", "🥭", "🌈", "📀",
+      "🌈", "🌱", "📈", "🌊", "🥭", "🌈", "📀",
       "(also you should\ntry this on a\nmobile device 🎶)",];
     var phraseLength = phrase.length;
     var phraseIndex = 0;
