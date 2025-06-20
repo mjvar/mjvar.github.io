@@ -2,31 +2,73 @@ window.onload = function() {
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
     console.log('isMobile:', isMobile);
+
+    let width, height;
+    if (isMobile) {
+        width = 200;
+        height = 400;
+    } else {
+        width = window.innerWidth;
+        height = window.innerHeight;
+    }
+
+    console.log('Canvas size:', width, height);
+
     const hydra = new Hydra({
         detectAudio: false,
         enableStreamCapture: false,
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: width,
+        height: height
     });
 
     p5 = new P5({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: width,
+        height: height
     });
     
 
     p5.hide();
 	  p5.canvas.style.zIndex = -1000;
 
-    var phrase = ['m', "move, scroll, \n& click", "🌈", "🌱", "📈", "🦤", "📀"];
+    var phrase = isMobile ? ['m', 
+      "(tap to\nmelt)", 
+      "🌱", "🌊", "🥭", "🌈","if you\nwant actual\ninformation\nit's in\nthe about\npage...",
+      "or you can\nhang out\nhere too", "no\njudgment!",":-)", 
+      "📀", "👽","🍄","🚅","🏠",
+      "oh!\nwhere are\nmy manners", "i haven't\nintroduced\nmyself",
+      "my name\nis mo", "well my\nfull name\nis mobile", "but mo\nis usually\neasier for\npeople",
+      "no i'm not\nmatthew", "i just\nlive on\ntheir\nwebsite",
+      "it's kind\nof a\nweird\nplace", "but rent\nis dirt\ncheap",
+      "and my\nroommate\ndes is\npretty\nchill", "des is\nshort for\ndesktop", 
+      "well she\ndoesn't\nreally\ntalk much", "but\nshe has\npretty\ncool mouse\nfunctionality", 
+      "so i\ncan't really\ncomplain","ummm",
+      "while\nyou're\nhere", "do you\nwant some\nsnacks?", 
+      "ok here\n ya go", "🍩",  "🍰", "🍫","🍪",
+      "🍓", "🧋", "🌽", "🥞", "dude what\nthe heck", "you\nfinished\nall my\nsnacks...!",
+      "grumble\ngrumble", "it's fine\ndon't feel\nbad", "i just\ndidn't think\nyou'd\nactually\nfinish them",
+      "also they\nwere kinda\nmelted\nanyway", "i guess\neverything\nis melting\nround here", 
+      "is that\nnormal?","anyway","i was\ngonna put\non some\nmusic",
+      "if that's\nok with\nyou", "🎸","🥁","🎶","🎵","🎤","💃",
+      "what a\ngreat song","oh you're\nstill here?", 
+      "you must\nbe really\nbored", "i get\nbored too\nsometimes", 
+      "being a\npage on\na website\nisn't\nexactly\nthe most\nexciting\nlife",
+      "ok i'm\ngonna loop\nback now", "but it\nwas nice\nchatting!",
+      "come back\nanytime 🫶", "maybe next\ntime you'll\nmeet my\nroommate?"]
+    :['m', "(move, scroll, \n& click)", 
+      "🌈", "🌱", "📈", "🌱", "🌊", "🥭", "🌈", "📀",
+      "(also you should\ntry this on a\nmobile device)",];
     var phraseLength = phrase.length;
     var phraseIndex = 0;
     var noiseVal = 1;
     var yMax = 1;
+    var mobileShuffleX = 2;
+    var mobileShuffleY = -1;
+    var blendVal = 1.01;
 
-    
-    p5.windowResized = ()=>{
-        p5.resizeCanvas(window.innerWidth, window.innerHeight);
+    if (!isMobile) {
+      p5.windowResized = ()=>{
+          p5.resizeCanvas(window.innerWidth, window.innerHeight);
+      }
     }
 
     p5.draw = ()=>{
@@ -39,7 +81,7 @@ window.onload = function() {
       p5.textAlign(p5.CENTER, p5.CENTER);
 
       var currentPhrase = phrase[phraseIndex % phraseLength];
-      p5.textSize(p5.height/2);
+      p5.textSize(p5.height/3);
       if (currentPhrase.length > 3) {
         p5.textSize(p5.height/12);
       }
@@ -63,14 +105,23 @@ window.onload = function() {
     // hydra
     s0.init({src: p5.canvas})
 
+
     if (isMobile) {
         // Simple version for mobile
+        p5.mouseClicked = ()=>{
+          phraseIndex++;
+          mobileShuffleX = (p5.random()-0.5)*4;
+          mobileShuffleY = (p5.random()-0.5)*4;
+          noiseVal = p5.random();
+          blendVal += 0.025;
+          console.log(Math.sin(blendVal)/2);
+        };  
         src(s0).out()
 
-        osc(10,0.01,1).modulate(noise(100,0.5),1).out(o1)
+        osc(10,0.01,2).modulate(noise(()=>noiseVal,0.2),1.1).out(o1)
 
-        src(o2).modulate(src(o1).blend(solid(-1,1),2),0.01)
-        .blend(src(o0),1.1)
+        src(o2).modulate(src(o1).blend(solid(()=>mobileShuffleX,()=>mobileShuffleY),-1),0.01)
+        .blend(src(o0),()=>Math.sin(blendVal)/2)
         .out(o2)
 
         src(o0).blend(o2,100).out(o3)
@@ -79,8 +130,7 @@ window.onload = function() {
     } else {
       p5.mouseClicked = ()=>{
         phraseIndex++;
-      };  
-
+      };
       src(s0).out()
 
       console.log(noiseVal);
@@ -100,3 +150,4 @@ window.onload = function() {
       render(o3)
     }
   }
+

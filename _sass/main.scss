@@ -89,10 +89,10 @@ body {
 }
 
 .socials-fixed{
-	position: absolute;
+	position: fixed; // changed from absolute to fixed
 	text-align: center;
 	left: 50%;
-	bottom: 0%;
+	bottom: 0;
 	transform: translate(-50%,0);
 	width: 100%;
 }
@@ -138,6 +138,7 @@ li {
         padding: 30px;
     }
 }
+
 
 // landing canvas styling
 
