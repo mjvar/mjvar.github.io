@@ -18,8 +18,8 @@ window.onload = function() {
         detectAudio: false,
         enableStreamCapture: false,
         width: width,
-        height: height
-    });
+        height: height,
+    });    
 
     p5 = new P5({
         width: width,
@@ -28,7 +28,8 @@ window.onload = function() {
     
 
     p5.hide();
-	  p5.canvas.style.zIndex = -1000;
+	  hydra.canvas.style.zIndex = -1;
+    hydra.canvas.style.cursor = 'pointer';
 
     var phrase = isMobile ? ['m', 
       "(tap to\nmelt)", 
@@ -92,10 +93,10 @@ window.onload = function() {
     p5.mouseWheel = (event)=>{
       console.log(noiseVal, event.delta);
       if (event.delta > 0) {
-        noiseVal += 0.2; // Increase noise value on scroll up
+        noiseVal += 0.5; // Increase noise value on scroll up
       }
       else {
-        noiseVal -= 0.2; // Decrease noise value on scroll down
+        noiseVal -= 0.5; // Decrease noise value on scroll down
       }
       noiseVal = p5.constrain(noiseVal, 1, 100);
       yMax -= event.delta * 0.001;
@@ -149,5 +150,14 @@ window.onload = function() {
 
       render(o3)
     }
+
+    // spacebar to "fullscreen" the canvas
+    document.addEventListener('keydown', (event) => {
+        if (event.code === 'Space') {
+            event.preventDefault(); // Prevent page scroll
+            hydra.canvas.style.zIndex *= -1; // Move canvas to the back
+            console.log(hydra.canvas.style.zIndex);
+    }
+});
   }
 
