@@ -35,17 +35,12 @@ body {
 
 /* Landing section - top of page */
 .landing {
+    font-size: 16px;
     text-align: center;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
     padding: 50px 20px 30px;
-}
-
-.landing p {
-    font-size: 16px;
-    line-height: 1.4;
-    margin: 0;
 }
 
 .landing-link {
@@ -123,44 +118,24 @@ li {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .landing {
         padding: 30px 15px 20px;
-    }
-    
-    .landing p {
-        font-size: 14px;
+        font-size: 50px;
     }
     
     .socials {
         padding: 20px 15px 30px;
-        gap: 12px;
+        gap: 20px;
     }
     
     .socials img {
-        width: 20px;
-        height: 20px;
+        width: 50px;
+        height: 50px;
     }
     
     .page-content {
         padding: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .landing p {
-        font-size: 12px;
-    }
-    
-    .socials {
-        gap: 10px;
-        flex-wrap: wrap;
-        max-width: 280px;
-    }
-    
-    .socials img {
-        width: 18px;
-        height: 18px;
     }
 }
 
