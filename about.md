@@ -14,3 +14,5 @@ Prior to U of T, I did my undergrad in computer science and interactive media at
 My other interests include birdwatching, sewing, puzzles, labor organizing, indie video games (especially roguelikes), music (especially hyperpop), and vegan cooking. 
 
 You are more than welcome to: email me at varona@cs.toronto.edu, read my [blog](/blog), or check out my [list of cool stuff on the Internet](/cool)!
+
+<span id="mike">p.s. if you find the easter egg on this website, I will give you a prize when you tell me in person!</span>
