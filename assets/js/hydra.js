@@ -34,63 +34,98 @@ window.onload = function() {
 	  hydra.canvas.style.zIndex = -1;
     hydra.canvas.style.cursor = 'pointer';
 
-    // weezetastic
-    const audio = new Audio();
-    audio.preload = 'auto';
-    audio.loop = false; // Set to true if you want it to loop
-    
-    // More robust loading
-    let audioReady = false;
-    
-    const loadAudio = () => {
-        audio.src = 'assets/media/Buddy Holly.mp3';
-        audio.load(); // Force reload
-    };
-    
-    audio.addEventListener('canplaythrough', () => {
-        console.log('Song loaded and ready to play');
-        audioReady = true;
-    });
-    
-    audio.addEventListener('error', (e) => {
-        console.error('Error loading song:', e);
-        console.error('Audio error details:', {
-            error: audio.error,
-            networkState: audio.networkState,
-            readyState: audio.readyState,
-            src: audio.src
+    // reusable audio setup
+    const createAudio = (src, name) => {
+        const audio = new Audio();
+        audio.preload = 'auto';
+        audio.loop = false;
+        audio.ready = false;
+        audio.fadeInterval = null; // Track fade interval
+        
+        const load = () => {
+            audio.src = src;
+            audio.load();
+        };
+        
+        // Fadeout method
+        audio.fadeOut = (duration = 1500, step = 0.1) => {
+            if (audio.paused) return;
+            
+            const fadeStep = step;
+            const fadeTime = duration / (1 / fadeStep); // Calculate interval time
+            
+            audio.fadeInterval = setInterval(() => {
+                if (audio.volume > fadeStep) {
+                    audio.volume -= fadeStep;
+                } else {
+                    audio.pause();
+                    audio.volume = 1; // Reset volume for next time
+                    clearInterval(audio.fadeInterval);
+                    console.log(`${name} faded out and stopped`);
+                }
+            }, fadeTime);
+        };
+        
+        audio.addEventListener('canplaythrough', () => {
+            console.log(`${name} loaded and ready to play`);
+            audio.ready = true;
         });
-        // Try to reload after error
-        setTimeout(loadAudio, 1000);
-    });
-    loadAudio();
+        
+        audio.addEventListener('error', (e) => {
+            console.error(`Error loading ${name}:`, e);
+            setTimeout(load, 1000);
+        });
+        
+        load();
+        return audio;
+    };
+
+    const weezer = createAudio('assets/media/Buddy Holly.mp3', 'weezer');
+    const win = createAudio('assets/media/win.mp3', 'win');
+
+    // helper func to safely play audio
+    const playAudio = (audioElement, name) => {
+        if (!audioElement.ready) return;
+        
+        audioElement.currentTime = 0;
+        const playPromise = audioElement.play();
+        
+        if (playPromise !== undefined) {
+            playPromise
+                .then(() => console.log(`${name} played successfully`))
+                .catch(error => console.error(`${name} play failed:`, error));
+        }
+    };
 
     var phrase = isMobile ? ['m', 
       "(tap to\nmelt)", 
-      "🌱", "🌊", "🥭", "🌈","(if you\nwant actual\ninformation\nit's in\nthe about\npage...",
-      "or you can\nhang out\nhere too", "no\njudgment!)",":-)", 
-      "📀", "👽","🍄","🚅","🏠",
+      "🌱", "🌊", "🥭", "🌈","(if you\nwant actual\ninformation\nit's on\nthe about\npage...",
+      "or you can\nhang out\nhere too,", "no\njudgment!)",":-)", 
+      "📀", "👽","🍄","🍃","🙂",
       "oh!\nwhere are\nmy manners", "i haven't\nintroduced\nmyself",
-      "my name\nis mo", "well my\nfull name\nis mobile", "but mo\nis usually\neasier for\npeople",
+      "i'm mo", "well my\nfull name\nis mobile", "but mo\nis usually\neasier for\npeople",
       "no i'm not\nmatthew", "i just\nlive on\ntheir\nwebsite",
-      "it's kind\nof a\nweird\nplace", "but rent\nis dirt\ncheap",
-      "and my\nroommate\ndes is\npretty\nchill", "des is\nshort for\ndesktop", 
-      "well she\ndoesn't\nreally\ntalk much", "but\nshe has\npretty\ncool mouse\nfunctionality", 
+      "it's kind\nof a\nweird\nplace", "but rent\nis pretty\ncheap",
       "so i\ncan't really\ncomplain","ummm",
       "while\nyou're\nhere", "do you\nwant some\nsnacks?", 
       "ok here\n ya go", "🍩",  "🍰", "🍫","🍪",
-      "🍓", "🧋", "🌽", "🥞", "dude what\nthe heck?", "you\nfinished\nall my\nsnacks...!",
-      "grumble\ngrumble", "it's fine\ndon't feel\nbad", "i just\ndidn't think\nyou'd\nactually\nfinish them",
-      "also they\nwere kinda\nmelted", "i guess\neverything\nis melting\nround here", 
-      "is that\nnormal?","anyway","i was\ngonna put\non some\nmusic",
+      "🍓", "🧋", "🌽", "🥞", "DUDE WHAT\nTHE HECK", "you\nfinished\nall my\nsnacks...!",
+      "*grumble\ngrumble*", "it's fine\ndon't feel\nbad", "i just\ndidn't think\nyou'd\nactually\nfinish them",
+      "also they\nwere kinda\nmelty", "i guess\neverything\nis melting\nround here", 
+      "is that\nnormal?"," ... ","hey uh","i was\ngonna put\non some\nmusic",
       "if that's\nok with\nyou", "🎸","🥁","🎶","🎵","🎤","💃",
-      "what a\ngreat song","oh you're\nstill here?", 
+      "what a\ngreat song!","man i\nlove\nweezer","oh you're\nstill here?", 
       "you must\nbe really\nbored", "i get\nbored too\nsometimes", 
-      "being a\npage on\na website\nisn't\nexactly\nthe most\nexciting\nlife",
-      "ok i'm\ngonna loop\nback now", "but it\nwas nice\nchatting!",
-      "come back\nanytime 🫶", "maybe next\ntime you'll\nmeet my\nroommate?"]
+      "i mean", "being a\ndisem-\nbodied\nvoice on\na website", "kinda\ngets old\nquick",
+      "are you\nlooking for\nsomething?", "an easter\negg, you\nsay?", "i don't\nhave any\nof those\nsorry :/",
+      "anyway","i'm\ngonna loop\nback now", "but it\nwas nice\nchatting!",
+      "come back\nanytime 🫶", " ... ", "...\n...", "...\n...\n...", 
+      "OK FINE\nI'LL GIVE\nYOU THE\nDAMN EGG",
+      "are you\nhappy now?", "🥚", "*you found\nthe easter\negg!*",
+      "*you should\ndefinitely\ntell matthew\nabout it*",
+      "also\ntry this\non desktop\nfor a\ndifferent\nexperience!",]
     :['m', "(move, scroll, \n& click)", 
-      "🌈", "🌱", "📈", "🌊", "🥭", "🌈", "📀",
+      "🌈", "🌱", "📈", "🌊", "🥭", "🍄", "📀",
       "(also you should\ntry this on a\nmobile device 🎶)",];
     var phraseLength = phrase.length;
     var phraseIndex = 0;
@@ -126,13 +161,15 @@ window.onload = function() {
     
     p5.mouseWheel = (event)=>{
       console.log(noiseVal, event.delta);
+      // noiseval changes a set amount based on scroll direction, ymax changes based on delta
       if (event.delta > 0) {
-        noiseVal += 0.5; // Increase noise value on scroll up
+        noiseVal += 0.5;
       }
       else {
-        noiseVal -= 0.5; // Decrease noise value on scroll down
+        noiseVal -= 0.5;
       }
       noiseVal = p5.constrain(noiseVal, 1, 100);
+
       yMax -= event.delta * 0.001;
       yMax = p5.constrain(yMax, 1, 1.5);
     }
@@ -142,51 +179,28 @@ window.onload = function() {
 
 
     if (isMobile) {
-        // Simple version for mobile
+        // mobile version: Mo
         p5.mouseClicked = ()=>{
           phraseIndex++;
           const currentIndex = phraseIndex % phraseLength;
-          console.log(phrase[currentIndex]);
-          // Start music at 🎸 emoji
-          if (phrase[currentIndex] === "🎸" && audioReady && audio.paused) {
-            audio.currentTime = 0; // Start from beginning
-            const playPromise = audio.play();
-            
-            if (playPromise !== undefined) {
-              playPromise
-                .then(() => {
-                  console.log('Audio started successfully');
-                })
-                .catch(error => {
-                  console.error('Play failed:', error);
-                  // Try again after user interaction
-                  setTimeout(() => {
-                    audio.play().catch(e => console.log('Retry also failed:', e));
-                  }, 100);
-                });
-            }
+          
+          if (phrase[currentIndex] === "🎸") {
+            playAudio(weezer, 'weezer');
           }
           
-          // Fade out music after 💃 emoji
-          if (phrase[currentIndex] === "what a\ngreat song" && !audio.paused) {
-            // Simple fade out by reducing volume over time
-            const fadeOut = () => {
-              if (audio.volume > 0.1) {
-                audio.volume -= 0.1;
-                setTimeout(fadeOut, 300); // Reduce volume every 300ms
-              } else {
-                audio.pause();
-                audio.volume = 1; // Reset volume for next time
-              }
-            };
-            fadeOut();
+          if (phrase[currentIndex] === "what a\ngreat song!") {
+            weezer.fadeOut();
           }
 
+          if (phrase[currentIndex] === "🥚") {
+              playAudio(win, 'Win sound');
+          }
+
+          // other vfx updates
           mobileShuffleX = (p5.random()-0.5)*4;
           mobileShuffleY = (p5.random()-0.5)*4;
           noiseVal = p5.random();
           blendVal += 0.025;
-          console.log(Math.sin(blendVal)/2);
         };  
         src(s0).out()
 
@@ -200,6 +214,7 @@ window.onload = function() {
 
         render(o3)
     } else {
+      // desktop version
       p5.mouseClicked = ()=>{
         phraseIndex++;
       };
