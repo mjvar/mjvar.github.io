@@ -1,8 +1,12 @@
 window.onload = function() {
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    
-    console.log('isMobile:', isMobile);
+    console.log('User Agent:', navigator.userAgent);
+    console.log('Touch support:', 'ontouchstart' in window);
+    console.log('Max touch points:', navigator.maxTouchPoints);
+    console.log('Screen width:', window.innerWidth);
+    console.log('Screen height:', window.innerHeight);
 
+    const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    console.log('isMobile:', isMobile);
     let width, height;
     if (isMobile) {
         width = 200;
