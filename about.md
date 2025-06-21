@@ -11,7 +11,7 @@ Broadly, I am interested in studying how people use data in their daily lives. S
 
 Before U of T, I did my undergrad in computer science and interactive media at NYU Abu Dhabi. I also worked with [Enrico Bertini](https://enrico.bertini.io) on visualization for machine learning interpretability and [Patrick Baudisch](https://hpi.de/baudisch/home.html) on adaptive interfaces for laser cutting. Before all that, I grew up in the Philippines.
 
-My other interests include birdwatching, sewing, puzzles, labor organizing, indie video games (especially roguelikes), music (especially hyperpop), and vegan cooking. 
+My other interests include birdwatching, sewing, puzzles, urbanism, indie video games (especially roguelikes), music (especially hyperpop), and vegan cooking. 
 
 Feel free to email me at varona[at]cs.toronto.edu, read my [blog](/blog), or check out my [list of cool stuff on the Internet](/cool).
 
