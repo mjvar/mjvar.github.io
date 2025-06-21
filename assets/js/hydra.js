@@ -81,6 +81,7 @@ window.onload = function() {
     };
 
     const weezer = createAudio('assets/media/Buddy Holly.mp3', 'weezer');
+    const joke = createAudio('assets/media/joke.mp3', 'joke');
     const win = createAudio('assets/media/win.mp3', 'win');
 
     // helper func to safely play audio
@@ -112,15 +113,15 @@ window.onload = function() {
       "🍓", "🧋", "🌽", "🥞", "DUDE WHAT\nTHE HECK", "you\nfinished\nall my\nsnacks...!",
       "*grumble\ngrumble*", "it's fine\ndon't feel\nbad", "i just\ndidn't think\nyou'd\nactually\nfinish them",
       "also they\nwere kinda\nmelty", "i guess\neverything\nis melting\nround here", 
-      "is that\nnormal?"," ... ","hey uh","i was\ngonna put\non some\nmusic",
+      "is that\nnormal?","you could\neven call\n it...","a site\nfor sore\neyes!"," ... ","hey uh","i was\ngonna put\non some\nmusic",
       "if that's\nok with\nyou", "🎸","🥁","🎶","🎵","🎤","💃",
-      "what a\ngreat song!","man i\nlove\nweezer","oh you're\nstill here?", 
+      "what a\ngreat song!","music is\nthe spice\nof life", "oh you're\nstill here?", 
       "you must\nbe really\nbored", "i get\nbored too\nsometimes", 
-      "i mean", "being a\ndisem-\nbodied\nvoice on\na website", "kinda\ngets old\nquick",
+      "i mean", "being a\ndisem-\nbodied\nvoice on\na website,", "kinda\ngets old\nquick",
       "are you\nlooking for\nsomething?", "an easter\negg, you\nsay?", "i don't\nhave any\nof those\nsorry :/",
       "anyway","i'm\ngonna loop\nback now", "but it\nwas nice\nchatting!",
       "come back\nanytime 🫶", " ... ", "...\n...", "...\n...\n...", 
-      "OK FINE\nI'LL GIVE\nYOU THE\nDAMN EGG",
+      "ok FINE\ni'll give\nyou the\ndamn egg",
       "are you\nhappy now?", "🥚", "*you found\nthe easter\negg!*",
       "*you should\ndefinitely\ntell matthew\nabout it*",
       "also\ntry this\non desktop\nfor a\ndifferent\nexperience!",]
@@ -186,6 +187,10 @@ window.onload = function() {
           
           if (phrase[currentIndex] === "🎸") {
             playAudio(weezer, 'weezer');
+          }
+
+          if (phrase[currentIndex] === "a site\nfor sore\neyes!") {
+            playAudio(joke, 'joke');
           }
           
           if (phrase[currentIndex] === "what a\ngreat song!") {
