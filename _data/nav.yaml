@@ -2,8 +2,8 @@
   link: /
 - name: about
   link: /about.html
-- name: research
-  link: /research.html
+- name: work
+  link: /work.html
 - name: blog
   link: /blog.html
 - name: cool

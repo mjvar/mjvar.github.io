@@ -2,10 +2,11 @@
 layout: default
 title: matthew // blog
 ---
-<h1>blogtastic!</h1>
-<!-- <p>assorted thoughts about a variety of topics</p> -->
+# under construction
+<!-- <h1>blogtastic!</h1>
+<p>assorted thoughts about a variety of topics</p>
 
-<h2>under construction!!!!</h2>
+<h2>under construction!!!!</h2> -->
 
 <!-- <ul>
   {% for post in site.posts %}
