@@ -4,7 +4,7 @@ layout: default
 ---
 <style>
 h5 {
-    color: #e35b00;
+    font-style: italic;
 }    
 </style>
 
