@@ -2,13 +2,12 @@
 layout: default
 title: matthew // blog
 ---
-# blogtastic!
-<p>assorted thoughts about a variety of topics</p>
 
+# blogtastic!
 <ul>
   {% for post in site.posts %}
     <li>
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <h3><a href="{{ post.url }}" target="_self">{{ post.title }}</a></h3>
       {{ post.excerpt }}
     </li>
   {% endfor %}
