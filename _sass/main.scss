@@ -121,7 +121,21 @@ li {
 @media (max-width: 1000px) {
     .landing {
         padding: 30px 15px 20px;
-        font-size: 20px;
+        font-size: 50px;
+    }
+    
+    .socials {
+        padding: 20px 15px 30px;
+        gap: 20px;
+    }
+    
+    .socials img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .page-content {
+        padding: 30px;
     }
 }
 
