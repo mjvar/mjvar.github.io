@@ -26,4 +26,3 @@ Here are some links to things I enjoy that you might want to check out:
 - **[LiquidText](https://www.liquidtext.net/)** is my favorite way to read academic papers
 - **[Hydra](https://hydra.ojack.xyz/)** is an open-source video synth. if you've ever heard of modular synthesis, it's a similar idea—you can chain, patch, and manipulate video signals to produce wacky visuals. the landing page of this site was built with Hydra! (wrapped in [p5.js](https://p5js.org/))
 - **[Tidalcycles](https://tidalcycles.org/)** is an open-source live coding environment for music. it's great for algorithmic and emergent sequencing (and it can hook up to Hydra for reactive visuals alongside your music!)
-- **[Download More RAM](https://downloadmoreram.com/)** for free RAM upgrades :-]
