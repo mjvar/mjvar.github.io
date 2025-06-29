@@ -14,13 +14,13 @@ Here are some links to things I enjoy that you might want to check out:
 
 
 ### read
+- **[Perfectly Imperfect](https://www.pi.fyi/read)**—tastes of taste from interesting people (guests include Charli xcx, Francis Ford Coppola, and The Rizzler)
 - **[Queering the Map](https://www.queeringthemap.com/)**—a digital archive of queer experiences around the world
-- **[against cop shit](https://jeffreymoro.com/blog/2020-02-13-against-cop-shit.html)**—a provocation on the oft-adversarial relationship between students and teachers
+- **[against cop shit](https://jeffreymoro.com/blog/2020-02-13-against-cop-shit.html)**—a provocation on the oft-adversarial relationship between students and educators
 - **[I Am A Transwoman. I Am In The Closet. I Am Not Coming Out.](https://medium.com/@jencoates/i-am-a-transwoman-i-am-in-the-closet-i-am-not-coming-out-4c2dd1907e42)**—really personal essay about the trans experience
 - **[The Pudding](https://pudding.cool/)**—visual, interactive essays about culture
 - **[Wealth shown to scale](https://eattherichtextformat.github.io/1-pixel-wealth/)**—a visceral visualization of wealth inequality
-- **[Perfectly Imperfect](https://www.pi.fyi/read)**—tastes of taste from interesting people
-- **[Taylor Swift and Totalitarianism](https://bluelabyrinths.com/2024/04/14/taylor-swift-and-totalitarianism/?fbclid=IwY2xjawLBDENleHRuA2FlbQIxMQABHsB6lpEzpaCnf47pmVtTtuwCt4XI3ZgfdKnwlPZfoKrAJGeHojMsxZQUGx6Z_aem_iuga5S4JU62JTni8vCLALA)**— astute application of crit theory to a modern cultural behemoth (nothing against swifties!!)
+- **[Taylor Swift and Totalitarianism](https://bluelabyrinths.com/2024/04/14/taylor-swift-and-totalitarianism/?fbclid=IwY2xjawLBDENleHRuA2FlbQIxMQABHsB6lpEzpaCnf47pmVtTtuwCt4XI3ZgfdKnwlPZfoKrAJGeHojMsxZQUGx6Z_aem_iuga5S4JU62JTni8vCLALA)**— astute application of crit theory to a modern cultural behemoth (nothing against swifties tho)
 
 ### use
 - **[LiquidText](https://www.liquidtext.net/)** is my favorite way to read academic papers
