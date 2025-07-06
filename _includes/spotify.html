@@ -121,7 +121,7 @@
   transition: color 0.2s ease;
 }
 
-.track-name:hover {
+.track-link:hover {
   color: #1db954;
   cursor: pointer;
 }
@@ -175,7 +175,7 @@
 }
 
 .playing .spotify-icon {
-  animation: pulse 4s infinite;
+  animation: pulse 5s infinite;
   background: #1db954;
 }
 
@@ -270,9 +270,9 @@ function updateWidget(data) {
     </div>
     <div class="song-info">
       <div class="track-details">
-        ${spotifyUrl ? `<a href="${spotifyUrl}" target="_blank" rel="noopener noreferrer" class="track-link">` : ''}
-          <div class="track-name">${track.name}</div>
-        ${spotifyUrl ? '</a>' : ''}
+          <div class="track-name">${spotifyUrl ? `<a href="${spotifyUrl}" target="_blank" rel="noopener noreferrer" class="track-link">` : ''}
+            ${track.name}
+          ${spotifyUrl ? '</a>' : ''}</div>
         <div class="artist-name">${track.artists ? track.artists.map(a => a.name).join(', ') : 'Unknown Artist'}</div>
       </div>
     </div>
