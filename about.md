@@ -16,3 +16,5 @@ My other interests include birdwatching, sewing, puzzles, urbanism, indie video 
 Feel free to email me at varona[at]cs.toronto.edu, read my [blog](/blog), or check out my [list of cool stuff on the Internet](/cool).
 
 <span class="mike">p.s. if you find the easter egg on this website, I will give you a prize when you tell me in person!</span>
+
+{% include spotify.html %}

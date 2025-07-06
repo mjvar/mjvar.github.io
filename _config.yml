@@ -21,3 +21,5 @@ exclude:
 # Plugins (optional)
 plugins:
   - jekyll-feed
+
+encoding: utf-8

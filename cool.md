@@ -22,7 +22,7 @@ Here are some links to things I enjoy that you might want to check out:
 - **[Wealth shown to scale](https://eattherichtextformat.github.io/1-pixel-wealth/)**—a visceral visualization of wealth inequality
 - **[Taylor Swift and Totalitarianism](https://bluelabyrinths.com/2024/04/14/taylor-swift-and-totalitarianism/?fbclid=IwY2xjawLBDENleHRuA2FlbQIxMQABHsB6lpEzpaCnf47pmVtTtuwCt4XI3ZgfdKnwlPZfoKrAJGeHojMsxZQUGx6Z_aem_iuga5S4JU62JTni8vCLALA)**— astute application of crit theory to a modern cultural behemoth (nothing against swifties tho)
 
-### use
+### etc
 - **[LiquidText](https://www.liquidtext.net/)** is my favorite way to read academic papers
-- **[Hydra](https://hydra.ojack.xyz/)** is an open-source video synth. if you've ever heard of modular synthesis, it's a similar idea—you can chain, patch, and manipulate video signals to produce wacky visuals. the landing page of this site was built with Hydra! (wrapped in [p5.js](https://p5js.org/))
+- **[Hydra](https://hydra.ojack.xyz/)** is an open-source video synth. if you've ever heard of [modular synthesis](https://en.wikipedia.org/wiki/Modular_synthesizer), it's a similar idea—you can chain, patch, and manipulate video signals to produce wacky visuals. the landing page of this site was built with Hydra! (wrapped in [p5.js](https://p5js.org/) for interactivity and web-ness)
 - **[Tidalcycles](https://tidalcycles.org/)** is an open-source live coding environment for music. it's great for algorithmic and emergent sequencing (and it can hook up to Hydra for reactive visuals alongside your music!)

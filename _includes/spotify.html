@@ -1,0 +1,329 @@
+<!-- Include this in your Jekyll template -->
+<div class="spotify-widget" id="spotifyWidget">
+  <div class="widget-header">
+    <div class="spotify-icon">♪</div>
+    <span>my music</span>
+  </div>
+  <div class="loading">
+    <div class="loading-spinner"></div>
+    <div>Loading...</div>
+  </div>
+</div>
+
+
+<style>
+.spotify-widget {
+  background: #fff5ee;
+  border-radius: 12px;
+  border: #e35b00 2px solid;
+  padding: 20px;
+  max-width: 600px;
+  width: 80vw;
+  color: black;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  box-sizing: border-box;
+  font-size: 30px;
+}
+
+@media (max-width: 1000px) {
+  .spotify-widget {
+    font-size: 30px;
+  }
+}
+
+.spotify-widget::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+.spotify-icon {
+  width: 20px;
+  height: 20px;
+  background: #999999;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.song-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  flex-direction: row-reverse;
+}
+
+.album-art {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  border-radius: 8px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.album-art:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.album-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.track-details {
+  flex: 1;
+  min-width: 0;
+  margin-right: 140px;
+}
+
+.track-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.track-name:hover {
+  color: #1db954;
+  cursor: pointer;
+}
+
+.track-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.artist-name {
+  font-size: 20px;
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status {
+  font-size: 16px;
+  opacity: 0.7;
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.loading {
+  text-align: center;
+  opacity: 0.8;
+  position: relative;
+  z-index: 1;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top: 2px solid #1db954;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.playing .spotify-icon {
+  animation: pulse 4s infinite;
+  background: #1db954;
+}
+
+.error {
+  background: #e74c3c;
+  text-align: center;
+}
+
+.offline-indicator {
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+</style>
+
+<script>
+// Replace with your actual API endpoint URL
+const SPOTIFY_API_URL = 'https://spotify-helper-eta.vercel.app/api/spotify';
+
+let updateInterval = null;
+
+function timeAgo(timestamp) {
+  const now = Date.now();
+  const diff = now - timestamp;
+  const minutes = Math.floor(diff / 60000);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  
+  if (minutes < 1) return 'just now';
+  if (minutes < 60) return `${minutes}m ago`;
+  if (hours < 24) return `${hours}h ago`;
+  return `${days}d ago`;
+}
+
+// Use this instead of direct fetch
+async function fetchSpotifyData() {
+  try {
+    const response = await fetch(SPOTIFY_API_URL, {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('Fetch error:', error);
+    return null;
+  }
+}
+
+function updateWidget(data) {
+  const widget = document.getElementById('spotifyWidget');
+  
+  if (!data || !data.item) {
+    widget.innerHTML = `
+      <div class="widget-header">
+        <div class="spotify-icon">♪</div>
+        <span>what I'm listening to</span>
+      </div>
+      <div style="text-align: center; opacity: 0.7; position: relative; z-index: 1;">
+        <div>Nothing playing right now</div>
+        <div class="offline-indicator">Last checked: ${new Date().toLocaleTimeString()}</div>
+      </div>
+    `;
+    return;
+  }
+  
+  const track = data.item;
+  const isPlaying = data.is_playing;
+  const playedAt = data.played_at ? new Date(data.played_at).getTime() : null;
+  
+  // Extract Spotify track ID for linking
+  const trackId = track.uri ? track.uri.split(':')[2] : null;
+  const spotifyUrl = trackId ? `https://open.spotify.com/track/${trackId}` : null;
+  
+  widget.className = `spotify-widget ${isPlaying ? 'playing' : ''}`;
+  
+  const statusText = isPlaying ? 
+    '🎧 currently playing!' : 
+    `⏸️ last played ${playedAt ? timeAgo(playedAt) : 'recently'}`;
+  
+  widget.innerHTML = `
+    <div class="widget-header">
+      <div class="spotify-icon">♪</div>
+      <span>what I'm listening to</span>
+    </div>
+    <div class="song-info">
+      <div class="track-details">
+        ${spotifyUrl ? `<a href="${spotifyUrl}" target="_blank" rel="noopener noreferrer" class="track-link">` : ''}
+          <div class="track-name">${track.name}</div>
+        ${spotifyUrl ? '</a>' : ''}
+        <div class="artist-name">${track.artists ? track.artists.map(a => a.name).join(', ') : 'Unknown Artist'}</div>
+      </div>
+    </div>
+    ${spotifyUrl ? `<a href="${spotifyUrl}" target="_blank" rel="noopener noreferrer" class="track-link">` : ''}
+      <div class="album-art">
+        ${track.album && track.album.images && track.album.images[0] ? 
+          `<img src="${track.album.images[0].url}" alt="Album art">` :
+          '♪'}
+      </div>
+    ${spotifyUrl ? '</a>' : ''}
+    <div class="status">
+      ${statusText}
+    </div>
+  `;
+}
+
+function showError(message) {
+  const widget = document.getElementById('spotifyWidget');
+  widget.className = 'spotify-widget error';
+  widget.innerHTML = `
+    <div class="widget-header">
+      <div class="spotify-icon">⚠</div>
+      <span>Error</span>
+    </div>
+    <div style="position: relative; z-index: 1;">${message}</div>
+  `;
+}
+
+async function updateSpotifyWidget() {
+  try {
+    const data = await fetchSpotifyData();
+    if (data === null) {
+      showError('Unable to fetch music data');
+      return;
+    }
+    updateWidget(data);
+  } catch (error) {
+    showError('Connection error');
+  }
+}
+
+// Initialize
+updateSpotifyWidget();
+
+// Update every 10 seconds
+updateInterval = setInterval(updateSpotifyWidget, 10000);
+
+// Clean up on page unload
+window.addEventListener('beforeunload', () => {
+  if (updateInterval) {
+    clearInterval(updateInterval);
+  }
+});
+</script>
