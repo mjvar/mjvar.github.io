@@ -7,14 +7,15 @@ title: matthew // about
 # about me!
 Hi, I'm Matthew! I am a Computer Science PhD student at the University of Toronto working on **information visualization** and **human-computer interaction**. I am supervised by [Carolina Nobre](https://www.cs.toronto.edu/~cnobre/) as part of the Human Interaction Visualization Lab and the [Dynamic Graphics Project](https://dgp.toronto.edu). 
 
-Broadly, I am interested in studying how people use data in their daily lives. Specifically, I use the lens of *visualization literacy* to define, measure, and improve the competencies that mediate access to data. Along the way, I try to critically analyze the definitions and concepts we come up with as a research community in terms of what values they promote and who might be excluded as a result. 
+Broadly, I am interested in studying how people interact with data in their daily lives. Specifically, I use the lens of *visualization literacy* to study the factors that mediate people and data—both on an individual level (e.g. competency with visualizations) and a structural level (e.g. contexts of data production and dissemination). My current projects involve mapping out the landscape of visualization literacy skills, improving critical engagement with election data, and exploring how to develop metrics of climate change that more closely match peoples' lived experiences with the environment.
 
 Before U of T, I did my undergrad in computer science and interactive media at NYU Abu Dhabi. I also worked with [Enrico Bertini](https://enrico.bertini.io) on visualization for machine learning interpretability and [Patrick Baudisch](https://hpi.de/baudisch/home.html) on adaptive interfaces for laser cutting. Before all that, I grew up in the Philippines.
 
-My other interests include birdwatching, sewing, puzzles, urbanism, indie video games (especially roguelikes), music (especially hyperpop), and vegan cooking. 
+My other interests include birdwatching, sewing, puzzles, urbanism, indie video games (especially roguelikes), music, and vegan cooking. 
 
-Feel free to email me at varona[at]cs.toronto.edu, read my [blog](/blog), or check out my [list of cool stuff on the Internet](/cool).
+Want to chat? Feel free to email me at varona[at]cs.toronto.edu! 
 
-<span class="mike">p.s. if you find the easter egg on this website, I will give you a prize when you tell me in person!</span>
+<span class="mike">p.s. You might also want to read my [blog](/blog) or check out my [list of cool stuff on the Internet](/cool).</span><br>
+<span class="mike">p.p.s. Can you find the easter egg on this website?</span>
 
 {% include spotify.html %}

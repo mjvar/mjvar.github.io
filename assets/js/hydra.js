@@ -106,14 +106,16 @@ window.onload = function() {
       "oh!\nwhere are\nmy manners", "i haven't\nintroduced\nmyself",
       "i'm mo", "well my\nfull name\nis mobile", "but mo\nis usually\neasier for\npeople",
       "no i'm not\nmatthew", "i just\nlive on\ntheir\nwebsite",
-      "it's kind\nof a\nweird\nplace", "but rent\nis pretty\ncheap",
+      "it's kind\nof a\nweird\nplace", "but they\ndon't charge\nme any rent",
       "so i\ncan't really\ncomplain","ummm",
       "while\nyou're\nhere", "do you\nwant some\nsnacks?", 
       "ok here\n ya go", "🍩",  "🍰", "🍫","🍪",
-      "🍓", "🧋", "🌽", "🥞", "DUDE WHAT\nTHE HECK", "you\nfinished\nall my\nsnacks...!",
+      "🍓", "🧋", "🌽", "🥞", "dude what\nthe heck?", "you\nfinished\nall my\nsnacks...!",
       "*grumble\ngrumble*", "it's fine\ndon't feel\nbad", "i just\ndidn't think\nyou'd\nactually\nfinish them",
-      "also they\nwere kinda\nmelty", "i guess\neverything\nis melting\nround here", 
-      "is that\nnormal?","you could\neven call\n it...","a site\nfor sore\neyes!"," ... ","hey uh","i was\ngonna put\non some\nmusic",
+      "also they\nwere kinda\nmelting\nanyway", "i guess\neverything\nis melting\nround here", 
+      "is that\nnormal?",
+      // "you could\neven call\n it...","a site\nfor sore\neyes!",
+      " ... ","hey uh","i was\ngonna put\non some\nmusic",
       "if that's\nok with\nyou", "🎸","🥁","🎶","🎵","🎤","💃",
       "what a\ngreat song!","music is\nthe spice\nof life", "oh you're\nstill here?", 
       "you must\nbe really\nbored", "i get\nbored too\nsometimes", 
@@ -124,7 +126,8 @@ window.onload = function() {
       "ok FINE\ni'll give\nyou the\ndamn egg",
       "are you\nhappy now?", "🥚", "*you found\nthe easter\negg!*",
       "*you should\ndefinitely\ntell matthew\nabout it*",
-      "also\ntry this\non desktop\nfor a\ndifferent\nexperience!",]
+      "*also\ntry this\non desktop\nfor a\ndifferent\nexperience!*"]
+      
     :['m', "(move, scroll, \n& click)", 
       "🌈", "🌱", "📈", "🌊", "🥭", "🍄", "📀",
       "(also you should\ntry this on a\nmobile device 🎶)",];
@@ -226,7 +229,7 @@ window.onload = function() {
       src(s0).out()
 
       console.log(noiseVal);
-      osc(1,0.01,1).modulate(noise(()=>noiseVal,1),1).out(o1)
+      osc(1,0.01,1).modulate(noise(()=>noiseVal,1),2).out(o1)
 
       src(o2).modulate(
         src(o1).add(solid(
