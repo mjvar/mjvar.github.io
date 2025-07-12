@@ -24,7 +24,7 @@ Here are some links to things I enjoy that you might want to check out:
 
 ### etc
 - **[Irasutoya](https://www.irasutoya.com/)** is a repository of free clip art by Japanese illustrator Takashi Mifune. what's great about it is that you can find clip art for almost any topic, no matter how obscure
-- do you play the NYT connections game? if you do, you might want to watch the british game show that they ~~plagiarized~~ were inspired by. it's called **[OnlyConnect](https://www.youtube.com/@wheelsongenius)** and it's fantastic! (and the puzzles are generally much better)
+- do you play the NYT connections game? if you do, you might want to watch the british quiz show that they ~~plagiarized~~ were inspired by. it's called **[Only Connect](https://www.youtube.com/@wheelsongenius)** and it's fantastic!
 - **[LiquidText](https://www.liquidtext.net/)** is my favorite way to read academic papers
 - **[Hydra](https://hydra.ojack.xyz/)** is an open-source video synth. if you've ever heard of [modular synthesis](https://en.wikipedia.org/wiki/Modular_synthesizer), it's a similar idea—you can chain, patch, and manipulate video signals to produce wacky visuals. the landing page of this site was built with Hydra! (wrapped in [p5.js](https://p5js.org/) for interactivity)
 - **[Tidalcycles](https://tidalcycles.org/)** is an open-source live coding environment for music. it's great for algorithmic and emergent sequencing (and it can hook up to Hydra for reactive visuals alongside your music)
