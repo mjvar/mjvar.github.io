@@ -9,9 +9,9 @@ h5 {
 </style>
 
 # research
-## Visualization Competencies
+<!-- ## Visualization Competencies
 ##### Matthew Varona\*, Maryam Hedayati\*, Matthew Kay, Carolina Nobre
-Visualization literacy research lacks a theoretical foundation for what its component abilities actually are. To address this, we propose a model of visualization competencies that maps out the skills and knowledge needed to engage with visualizations. Our model organizes competencies around stages in the visualization process and highlights the interplay between reading and writing abilities. We developed the model by consulting a variety of sources, including reserach papers, college syllabi, K-12 curricula, instructional books, and interviews with professionals—which also allows us to reflect on diverging perspectives on literacy in visualization research, education, and practice. (To be submitted!)
+Visualization literacy research lacks a theoretical foundation for what its component abilities actually are. To address this, we propose a model of visualization competencies that maps out the skills and knowledge needed to engage with visualizations. Our model organizes competencies around stages in the visualization process and highlights the interplay between reading and writing abilities. We developed the model by consulting a variety of sources, including reserach papers, college syllabi, K-12 curricula, instructional books, and interviews with professionals—which also allows us to reflect on diverging perspectives on literacy in visualization research, education, and practice. (To be submitted!) -->
 
 ## The State of the Art in Visualization Literacy
 ##### Matthew Varona, Karen Bonilla, Maryam Hedayati, Alark Joshi, Matthew Kay, Lane Harrison, Carolina Nobre
