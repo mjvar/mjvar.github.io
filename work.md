@@ -16,12 +16,12 @@ Visualization literacy research lacks a theoretical foundation for what its comp
 ## The State of the Art in Visualization Literacy
 ##### **Matthew Varona**, Karen Bonilla, Maryam Hedayati, Alark Joshi, Matthew Kay, Lane Harrison, Carolina Nobre
 ##### *[(preprint)](https://arxiv.org/abs/2509.01018)*
-We review 374 papers for a comprehensive overview of visualization literacy research. As a step towards more consistency and clarity in the field, we help researchers *operationalize* literacy—that is, break down an abstract concept into researchable parts—by proposing a taxonomy of visualization literacy made of 5 categories of research and 4 competency themes. Along the way, we summarize findings from how visualization literacy is defined, measured, studied, and improved. 
+A systematic review of visualization literacy spanning 374 papers. We describe 5 categories of literacy research and 4 key competency themes that define the field.
 
 ## Theory is Shapes
 ##### **Matthew Varona**, Maryam Hedayati, Matthew Kay, Carolina Nobre
 ##### *alt.vis workshop at IEEE VIS 2025 [(arxiv)](https://arxiv.org/abs/2510.01382)*
-In this satirical treatise, we argue that theory is shapes. By analyzing the shapes we usually use to depict theories (e.g. Cartesian planes and flowcharts), we begin to understand the vast potential of more creative, interesting shapes for theory (e.g. The BLT Theory of Visualization Consumption, The Iceberg of Visualization Figures).
+A satirical treatise arguing that theory is, in fact, shapes. We do some serious analysis then present ideas like "The BLT Theory of Visualization Consumption".
 
 # teaching
 - TA for CSC2537 Information Visualization graduate course (Fall 2025)
