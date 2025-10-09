@@ -16,7 +16,7 @@ Visualization literacy research lacks a theoretical foundation for what its comp
 ## The State of the Art in Visualization Literacy
 ##### **Matthew Varona**, Karen Bonilla, Maryam Hedayati, Alark Joshi, Matthew Kay, Lane Harrison, Carolina Nobre
 ##### *[(preprint)](https://arxiv.org/abs/2509.01018)*
-A systematic review of visualization literacy spanning 374 papers. We describe 5 categories of literacy research and 4 key competency themes that define the field.
+A systematic review of visualization literacy spanning 374 papers. Our analysis reveals 5 categories of literacy research and 4 key competency themes that define the field.
 
 ## Theory is Shapes
 ##### **Matthew Varona**, Maryam Hedayati, Matthew Kay, Carolina Nobre
