@@ -12,7 +12,7 @@ Before U of T, I did my undergrad in computer science and interactive media at N
 I'm always down to chat about shared interests or collaborations. Feel free to email me at varona[at]cs.toronto.edu! 
 
 # research interests
-Broadly, I am interested in **how people make sense of the world through data and visualizations**. Specifically, I use the lens of visualization literacy to study the factors that mediate peoples' encounters with data—both on an individual level (e.g. competency with visualizations) and a structural level (e.g. contexts of data production and dissemination). I also seek to incorporate critical social lenses in the study of visualizations. My current projects involve modeling the abilities that make up visualization literacy, improving critical engagement with election data, and reimagining climate communication using subjective indicators. 
+Broadly, I am interested in **how people make sense of the world through data and visualizations**. Specifically, I use the lens of visualization literacy to study the factors that shape peoples' encounters with data—both on an individual level (e.g. competence with visualizations) and a structural level (e.g. how data is produced and shared). My current projects involve mapping the abilities that make up visualization literacy, developing educational games about election data, and developing new, subjective indicators for climate communication.
 
 # etc.
 My other interests include labor organizing, birdwatching, sewing, puzzles, urbanism, indie video games (especially roguelikes), music (see my most recently played track below), and vegan cooking. 
