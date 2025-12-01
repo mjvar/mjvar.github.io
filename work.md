@@ -9,11 +9,13 @@ h5 {
 </style>
 
 # research
+{% include pubs.html %}
+
 <!-- ## Visualization Competencies
 ##### Matthew Varona\*, Maryam Hedayati\*, Matthew Kay, Carolina Nobre
 Visualization literacy research lacks a theoretical foundation for what its component abilities actually are. To address this, we propose a model of visualization competencies that maps out the skills and knowledge needed to engage with visualizations. Our model organizes competencies around stages in the visualization process and highlights the interplay between reading and writing abilities. We developed the model by consulting a variety of sources, including reserach papers, college syllabi, K-12 curricula, instructional books, and interviews with professionals—which also allows us to reflect on diverging perspectives on literacy in visualization research, education, and practice. (To be submitted!) -->
 
-## The State of the Art in Visualization Literacy
+<!-- ## The State of the Art in Visualization Literacy
 ##### **Matthew Varona**, Karen Bonilla, Maryam Hedayati, Alark Joshi, Matthew Kay, Lane Harrison, Carolina Nobre
 ##### *[(preprint)](https://arxiv.org/abs/2509.01018)*
 A systematic review of visualization literacy spanning 374 papers. We analyze advancements across 5 categories of literacy research and propose 4 key competency themes that define the field.
@@ -21,7 +23,7 @@ A systematic review of visualization literacy spanning 374 papers. We analyze ad
 ## Theory is Shapes
 ##### **Matthew Varona**, Maryam Hedayati, Matthew Kay, Carolina Nobre
 ##### *alt.vis workshop at IEEE VIS 2025 [(arxiv)](https://arxiv.org/abs/2510.01382)*
-A satirical treatise about "theory figures". We present ideas like "The BLT Theory of Visualization Consumption" to argue that theory is, in fact, shapes.
+A satirical treatise about "theory figures". We present ideas like "The BLT Theory of Visualization Consumption" to argue that theory is, in fact, shapes. -->
 
 # teaching
 - TA for CSC2537 Information Visualization graduate course (Fall 2025)

@@ -1,0 +1,141 @@
+<style>
+/* #publications-container {
+    max-width: 800px;
+    margin: 0;
+} */
+
+.publications-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.publication-item {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    flex-wrap: nowrap;        /* keep icon + info in a row on wide screens */
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+/* IMAGE CONTAINER: fixed landscape rectangle */
+.pub-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 180px;          /* fixed width column on the left */
+    max-width: 180px;
+    aspect-ratio: 16 / 9;     /* always a landscape rectangle */
+    overflow: hidden;         /* nothing can spill out */
+}
+
+/* IMAGE: fully contained, no stretching, no overflow */
+.pub-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;      /* preserve aspect ratio; show whole image */
+    display: block;
+}
+
+/* TEXT AREA */
+.pub-info {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.pub-venue {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #4b4b4b;
+    padding: 0.3rem 0.6rem;
+    background-color: #fbfbfb;
+    border-color: #b6b6b6;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+}
+
+.pub-title {
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.pub-authors {
+    font-size: 0.8rem;
+    color: #666;
+    /* margin-bottom: 0.3rem; */
+}
+
+.pub-summary {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.pub-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.pub-link {
+    display: inline-block;
+    color: #e35b00;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
+}
+
+.pub-link:hover {
+    background-color: #f7d5be;
+}
+
+.loading {
+    color: #888;
+    font-style: italic;
+}
+
+.error {
+    color: #e74c3c;
+    padding: 1rem;
+    background-color: #fadbd8;
+    border-radius: 4px;
+}
+
+/* ---------- RESPONSIVE: narrow screens ---------- */
+@media (max-width: 600px) {
+    .publication-item {
+        flex-direction: column;        /* stack image above text */
+        align-items: stretch;
+    }
+
+    .pub-icon {
+        margin: 0 auto 0.75rem;        /* center the image block */
+        width: 100%;
+        max-width: 400px;              /* optional: prevent it from getting huge */
+    }
+
+    .pub-info {
+        width: 100%;
+    }
+}
+</style>
+
+<div id="publications-container">
+    <p class="loading">Loading publications...</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+<script src="assets/js/pubs.js"></script>

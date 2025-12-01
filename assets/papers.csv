@@ -1,0 +1,33 @@
+title,authors,venue,summary,icon,paper_link,bibtex
+Theory is Shapes,"Matthew Varona, Maryam Hedayati, Matthew Kay, Carolina Nobre",alt.vis 2025,A satirical treatise on how shapes shape theory. ,assets/papericons/shapes.png,https://arxiv.org/abs/2510.01382,"@misc{VaronaetalTheoryShapes2025,
+  title = {Theory Is {{Shapes}}},
+  author = {Varona, Matthew and Hedayati, Maryam and Kay, Matthew and Nobre, Carolina},
+  year = 2025,
+  month = oct,
+  number = {arXiv:2510.01382},
+  eprint = {2510.01382},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2510.01382},
+  urldate = {2025-11-29},
+  abstract = {""Theory figures"" are a staple of theoretical visualization research. Common shapes such as Cartesian planes and flowcharts can be used not only to explain conceptual contributions, but to think through and refine the contribution itself. Yet, theory figures tend to be limited to a set of standard shapes, limiting the creative and expressive potential of visualization theory. In this work, we explore how the shapes used in theory figures afford different understandings and explanations of their underlying phenomena. We speculate on the value of visualizing theories using more expressive configurations, such as icebergs, horseshoes, M\""obius strips, and BLT sandwiches. By reflecting on figure-making's generative role in the practice of theorizing, we conclude that theory is, in fact, shapes.},
+  archiveprefix = {arXiv},
+  howpublished = {\url{http://arxiv.org/abs/2510.01382}},
+  keywords = {Computer Science - Human-Computer Interaction}
+}"
+The State of the Art in Visualization Literacy,"Matthew Varona, Karen Bonilla, Maryam Hedayati, Alark Joshi, Matthew Kay, Lane Harrison, Carolina Nobre",preprint,"Systematic review of assessments, studies, and interventions in visualization literacy.",assets/papericons/star.png,https://arxiv.org/abs/2509.01018,"@misc{VaronaetalStateArtVisualization2025a,
+  title = {The {{State}} of the {{Art}} in {{Visualization Literacy}}},
+  author = {Varona, Matthew and Bonilla, Karen and Hedayati, Maryam and Joshi, Alark and Kay, Matthew and Harrison, Lane and Nobre, Carolina},
+  year = 2025,
+  month = aug,
+  number = {arXiv:2509.01018},
+  eprint = {2509.01018},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2509.01018},
+  urldate = {2025-09-08},
+  abstract = {Research in visualization literacy explores the skills required to engage with visualizations. This state-of-the-art report surveys the current literature in visualization literacy to provide a comprehensive overview of the field. We propose a taxonomy of visualization literacy that organizes the field into competency themes and research categories. To address ambiguity surrounding the term ``visualization literacy'', we provide a framework for operationalizing visualization literacy based on application contexts (including domain, scenario, and audience) and relevant competencies, which are categorized under consumption, construction, critique, and connection. Research contributions are organized into five categories: ontology, assessment, mechanisms, populiteracy, and intervention. For each category, we identify key trends, discuss which competencies are addressed, highlight open challenges, and examine how advancements within these areas inform and reinforce each other, driving progress in the field.},
+  archiveprefix = {arXiv},
+  howpublished = {\url{http://arxiv.org/abs/2509.01018}},
+  keywords = {Computer Science - Human-Computer Interaction}
+}"
