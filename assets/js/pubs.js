@@ -41,7 +41,7 @@ async function loadPublications() {
 function displayPublications(publications) {
     const container = document.getElementById('publications-container');
     
-    const listHTML = publications.map(pub => {
+    const listHTML = publications.reverse().map(pub => {
     const title = pub.title || 'Untitled';
     const authors = pub.authors ? pub.authors.replace(/Matthew Varona/g, '<span style="text-decoration:underline;font-style:italic;">Matthew Varona</span>') : '';
     const venue = pub.venue || '';
@@ -164,12 +164,13 @@ function displayPublications(publications) {
             <div class="pub-authors">${authors}</div>
             <div class="pub-summary">${summary}</div>
             <div class="pub-links">
-                ${paperLink ? `<a href="${paperLink}" class="pub-link" target="_blank" rel="noopener">Paper</a>` : ''}
-                ${bibtex ? `<a href="${bibtex}" class="pub-link bibtex" target="_blank" rel="noopener">BibTeX</a>` : ''}
+                ${paperLink ? `<a href="${paperLink}" class="pub-link" target="_blank" rel="noopener">Paper PDF</a>` : ''}
             </div>
         </div>
         </li>
     `;
+    // bibtex removed for now, but insert this in pub links
+    // ${bibtex ? `<a href="${bibtex}" class="pub-link bibtex" target="_blank" rel="noopener">BibTeX</a>` : ''}
     }).join('');
     
     container.innerHTML = `<ul class="publications-list">${listHTML}</ul>`;
