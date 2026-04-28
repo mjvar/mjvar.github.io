@@ -1,5 +1,5 @@
 title,authors,venue,summary,icon,paper_link,bibtex
-The State of the Art in Visualization Literacy,"Matthew Varona, Karen Bonilla, Maryam Hedayati, Alark Joshi, Matthew Kay, Lane Harrison, Carolina Nobre",preprint,"Systematic review of assessments, studies, theories, and interventions in visualization literacy.",assets/papericons/star.png,https://arxiv.org/abs/2509.01018,"@misc{VaronaetalStateArtVisualization2025a,
+The State of the Art in Visualization Literacy,"Matthew Varona, Karen Bonilla, Maryam Hedayati, Alark Joshi, Matthew Kay, Lane Harrison, Carolina Nobre",preprint,"We systematically review 374 papers to develop frameworks for studying visualization literacy and highlight the field's most pressing challenges.",assets/papericons/star.png,https://arxiv.org/abs/2509.01018,"@misc{VaronaetalStateArtVisualization2025a,
   title = {The {{State}} of the {{Art}} in {{Visualization Literacy}}},
   author = {Varona, Matthew and Bonilla, Karen and Hedayati, Maryam and Joshi, Alark and Kay, Matthew and Harrison, Lane and Nobre, Carolina},
   year = 2025,
@@ -15,7 +15,7 @@ The State of the Art in Visualization Literacy,"Matthew Varona, Karen Bonilla, M
   howpublished = {\url{http://arxiv.org/abs/2509.01018}},
   keywords = {Computer Science - Human-Computer Interaction}
 }"
-Theory is Shapes,"Matthew Varona, Maryam Hedayati, Matthew Kay, Carolina Nobre",alt.vis 2025,A satirical treatise on how shapes shape theory. ,assets/papericons/shapes.png,https://arxiv.org/abs/2510.01382,"@misc{VaronaetalTheoryShapes2025,
+Theory is Shapes,"Matthew Varona, Maryam Hedayati, Matthew Kay, Carolina Nobre",alt.vis 2025,"A satirical treatise on how shapes shape theory. Winner of the 'Tastiest' award at the alt.vis 2025 workshop.",assets/papericons/shapes.png,https://arxiv.org/abs/2510.01382,"@misc{VaronaetalTheoryShapes2025,
   title = {Theory Is {{Shapes}}},
   author = {Varona, Matthew and Hedayati, Maryam and Kay, Matthew and Nobre, Carolina},
   year = 2025,
@@ -32,7 +32,7 @@ Theory is Shapes,"Matthew Varona, Maryam Hedayati, Matthew Kay, Carolina Nobre",
   keywords = {Computer Science - Human-Computer Interaction}
 }"
 "Negotiating Relationships with ChatGPT: Perceptions, External Influences, and Strategies for AI Companionship
-","Patrick Yung Kang Lee*, Jessica Bo*, Zixin Zhao*, Paula Akemi Aoyagui*, Matthew Varona*, Ashton Anderson, Anastasia Kuzminykh, Fanny Chevalier, Carolina Nobre",FAccT 2026 (to appear),"Mixed-method study exploring relationship dynamics between humans and their AI romantic companions.",assets/papericons/aibf.png,https://arxiv.org/pdf/2601.13188,"@misc{LeeetalNegotiatingRelationshipsChatGPT2026,
+","Patrick Yung Kang Lee*, Jessica Bo*, Zixin Zhao*, Paula Akemi Aoyagui*, Matthew Varona*, Ashton Anderson, Anastasia Kuzminykh, Fanny Chevalier, Carolina Nobre",FAccT 2026 (to appear),"Combining interviews, surveys, and large-scale Reddit analysis to explore relationship dynamics between humans and their AI romantic companions.",assets/papericons/aibf.png,https://arxiv.org/pdf/2601.13188,"@misc{LeeetalNegotiatingRelationshipsChatGPT2026,
   title = {Negotiating {{Relationships}} with {{ChatGPT}}: {{Perceptions}}, {{External Influences}}, and {{Strategies}} for {{AI Companionship}}},
   shorttitle = {Negotiating {{Relationships}} with {{ChatGPT}}},
   author = {Lee, Patrick Yung Kang and Bo, Jessica Y. and Zhao, Zixin and Aoyagui, Paula Akemi and Varona, Matthew and Anderson, Ashton and Kuzminykh, Anastasia and Chevalier, Fanny and Nobre, Carolina},
@@ -48,5 +48,4 @@ Theory is Shapes,"Matthew Varona, Maryam Hedayati, Matthew Kay, Carolina Nobre",
   archiveprefix = {arXiv},
   howpublished = {\url{http://arxiv.org/abs/2601.13188}},
   keywords = {Computer Science - Computers and Society,Computer Science - Human-Computer Interaction}
-}
-"
+}"
