@@ -13,7 +13,7 @@ My research aims to **understand the role of data and visualizations in how peop
 I'm always happy to chat about shared interests or collaborations. Feel free to email me at varona[at]cs.toronto.edu! 
 
 # etc.
-Before U of T, I did my undergrad in computer science and interactive media at New York University. I grew up in Quezon City, Philippines. Outside of work, I am an avid music fan (see my most recently played track below) who also collects records and obsessively catalogs what I listen to. My other interests include birdwatching, sewing, puzzles, urbanism, labor organizing, indie video games (especially roguelikes), and vegan cooking. 
+Before U of T, I did my undergrad in computer science and interactive media at New York University. I grew up in Quezon City, Philippines. Outside of work, I am an avid music fan (see my most recently played track below) who also collects records and obsessively [catalogs](https://rateyourmusic.com/~infairvar) what I listen to. My other interests include birdwatching, sewing, puzzles, urbanism, labor organizing, indie video games (especially roguelikes), and vegan cooking. 
 
 <span class="mike">p.s. You might also want to read my [blog](/blog) or check out my [list of cool stuff on the Internet](/cool).</span><br>
 <span class="mike">p.p.s. Can you find the easter egg on this website?</span>
