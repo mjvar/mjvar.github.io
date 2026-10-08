@@ -7,7 +7,7 @@ title: matthew // cool
 Here are some links to things I enjoy that you might want to check out:
 
 ### play
-- my favorite daily word puzzles: **[Raddle](https://raddle.quest/)** and **[Pimantle](https://semantle.pimanrul.es/)**
+- my favorite daily puzzle games: **[Raddle](https://raddle.quest/)**, **[Pimantle](https://semantle.pimanrul.es/)**, and **[Blird Game](https://app.academy.allaboutbirds.org/games/blird)**
 - **[Puzzmo](https://www.puzzmo.com/today)** for well-clued and quirky crosswords, plus many other cool puzzles! my favorites are pile-up poker, ribbit, and circuits
 - **[PokéRogue](https://pokerogue.net/)** is pokémon reimagined as a roguelike, which is exactly as addictive as it sounds
 - **[Music League](https://musicleague.com/)** is a thing where you can make a league with your friends, submit songs every week based on prompts, and then vote on your favorite songs! great way to keep in touch with people & obviously discover a ton of good music
